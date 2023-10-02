@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv [
+  <!ELEMENT cv (personalInformation, education, projects, skills)>
+  <!ELEMENT personalInformation (firstName, lastName, address, email, phone)>
+  <!ELEMENT firstName (#PCDATA)>
+  <!ELEMENT lastName (#PCDATA)>
+  <!ELEMENT address (Country, city, zipCode)>
+  <!ELEMENT Country (#PCDATA)>
+  <!ELEMENT city (#PCDATA)>
+  <!ELEMENT zipCode (#PCDATA)>
+  <!ELEMENT email (#PCDATA)>
+  <!ELEMENT phone (#PCDATA)>
+  
+  <!ELEMENT education (degree+)>
+  <!ELEMENT degree (title, school, year)>
+  <!ELEMENT title (#PCDATA)>
+  <!ELEMENT school (#PCDATA)>
+  <!ELEMENT year (#PCDATA)>
+  
+  <!ELEMENT projects (project+)>
+  <!ELEMENT project (title, description?, year)>
+  <!ELEMENT title (#PCDATA)>
+  <!ELEMENT description (#PCDATA)>
+  <!ELEMENT year (#PCDATA)>
+  <!ELEMENT skills (programmingLanguages, frameworks, certifications?,  languages)>
+  <!ELEMENT certifications (certification+)>
+  <!ELEMENT certification (certName, certDate)>
+  <!ELEMENT certName (#PCDATA)>
+  <!ELEMENT certDate (#PCDATA)>
+  <!ELEMENT programmingLanguages (language+)>
+  <!ELEMENT language (#PCDATA)>
+  <!ELEMENT frameworks (framework+)>
+  <!ELEMENT framework (#PCDATA)>
+  <!ELEMENT Design (logiciel+)>
+  <!ELEMENT logiciel (#PCDATA)>
+  <!ELEMENT languages (language+)>
+]>
+
+
+<cv>
+  <personalInformation>
+    <firstName>Aziz</firstName>
+    <lastName>Khlayfia</lastName>
+    <address>
+      <Country>tunisia</Country>
+      <city>manouba</city>
+      <zipCode>2086</zipCode>
+    </address>
+    <email>azizkhlayfia16@gmail.com</email>
+    <phone>+216 94 624 252</phone>
+  </personalInformation>
+  
+  <education>
+    <degree>
+      <title>Cycle d'ingénieur</title>
+      <school>Tek-up</school>
+      <year>2022-now</year>
+    </degree>
+    <degree>
+      <title>La licence appliqué en technologie d'informatiques</title>
+      <school>ISET Du Kef</school>
+      <year>2017-2020</year>
+    </degree>
+    <degree>
+      <title>Baccalauréat en informatique</title>
+      <school>Lycée khaled ben walid</school>
+      <year>2017</year>
+    </degree>
+  </education>
+
+  <projects>
+    <project>
+      <title>Projet fin d'année</title>
+      <description>conception et développement d'une application web de gestion de formation</description>
+      <year>2021</year>
+    </project>
+    <project>
+      <title>Projet de fin d'étude</title>
+      <description>Conception et développements d'une plateforme de gestion des matériels informatiques:Angular, Node]S,MySQL</description>
+      <year>2022</year>
+    </project>
+    <project>
+      <title>Projet Développement web</title>
+      <description>site web de vente en ligne :HTML,CSS, JS, PHP</description>
+      <year>2023</year>
+    </project>
+  </projects>
+
+  <skills>
+    <programmingLanguages>
+      <language>Java</language>
+      <language>Python</language>
+      <language>C</language>
+    </programmingLanguages>
+    <frameworks>
+      <framework>Angular</framework>
+      <framework>Spring Boot</framework>
+    </frameworks>
+    <certifications>
+        <certification>
+            <certName>RHCSA</certName>
+            <certDate>2023</certDate>
+        </certification>
+        <certification>
+            <certName>PCAP</certName>
+            <certDate>2023</certDate>
+        </certification>
+        <certification>
+            <certName>OCA</certName>
+            <certDate>2022</certDate>
+        </certification>
+    </certifications>
+    <languages>
+      <language>English</language>
+      <language>French</language>
+    </languages>
+  </skills>
+</cv>
