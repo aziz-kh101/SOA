@@ -22,6 +22,7 @@
   <!ELEMENT title (#PCDATA)>
   <!ELEMENT description (#PCDATA)>
   <!ELEMENT year (#PCDATA)>
+
   <!ELEMENT skills (programmingLanguages, frameworks, certifications?,  languages)>
   <!ELEMENT certifications (certification+)>
   <!ELEMENT certification (certName, certDate)>
@@ -31,8 +32,6 @@
   <!ELEMENT language (#PCDATA)>
   <!ELEMENT frameworks (framework+)>
   <!ELEMENT framework (#PCDATA)>
-  <!ELEMENT Design (logiciel+)>
-  <!ELEMENT logiciel (#PCDATA)>
   <!ELEMENT languages (language+)>
 ]>
 
