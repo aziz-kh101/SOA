@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:schema xmlns:xsd="http://schemas.xmlsoap.org/soap/envelope/">
+    <xsd:complexType name="StudentType">
+        <xsd:sequence>
+            <xsd:element name="Nom" type="xsd:string" />
+            <xsd:element name="Prenom" type="xsd:string" />
+            <xsd:element name="Age" type="xsd:float" />
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="Student" type="StudentType" />
+    <xsd:element name="TabClasses">
+        <xsd:complexType base="SOAP-ENC:Array">
+            <xsd:element name="Student" type="Student" maxOccurs="27" />
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -19,9 +19,7 @@
   
   <!ELEMENT projects (project+)>
   <!ELEMENT project (title, description?, year)>
-  <!ELEMENT title (#PCDATA)>
   <!ELEMENT description (#PCDATA)>
-  <!ELEMENT year (#PCDATA)>
 
   <!ELEMENT skills (programmingLanguages, frameworks, certifications?,  languages)>
   <!ELEMENT certifications (certification+)>
