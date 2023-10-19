@@ -1,0 +1,34 @@
+version: "3.8"
+services:
+  db:
+    image: mariadb:10.4.28
+    volumes:
+      - db-data:/var/lib/mysql
+    environment:
+      MARIADB_ROOT_PASSWORD: sql2949
+      MARIADB_DATABASE: soa_project
+    restart: on-failure:3
+  frontend:
+    build:
+      context: ./front-end
+      args:
+        REACT_APP_API_URL: http://localhost:3000/api
+    ports:
+      - 80:80
+    restart: on-failure:3
+  backend:
+    build: ./back-end
+    ports:
+      - 3000:3001
+    environment:
+      NODE_ENV: production
+      HOST: db
+      DB_USER: root
+      DB_USER_PWD: sql2949
+      DB_NAME: soa_project
+      TOKEN_SECRET: 482B4D6251655468576D5A7134743777217A25432A462D4A404E635266556A586E3272357538782F413F4428472B4B6250645367566B59703373367639792442
+    depends_on:
+      - db
+    restart: on-failure:3
+volumes:
+  db-data:
