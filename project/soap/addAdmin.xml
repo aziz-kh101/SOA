@@ -1,0 +1,42 @@
+<!-- Request -->
+
+<!-- POST /api/admins HTTP/1.1 -->
+<!-- Host: localhost -->
+<!-- Content-Type: application/soap+xml; charset=utf-8 -->
+<!-- Content-Length: nnn -->
+
+<?xml version="1.0"?>
+
+<soap:Envelope
+    xmlns:soap="http://www.w3.org/2003/05/soap-envelope/"
+    soap:encodingStyle="http://www.w3.org/2003/05/soap-encoding">
+
+    <soap:Body xmlns:m="http://localhost/api/admins">
+        <m:Admin>
+            <m:email>aaaa@mail.com</m:email>
+            <m:password>123456</m:password>
+            <m:first_name>aaaa</m:first_name>
+            <m:last_name>aaaa</m:last_name>
+        </m:Admin>
+    </soap:Body>
+
+</soap:Envelope>
+
+<!-- Response -->
+
+<!-- HTTP/1.1 200 OK -->
+<!-- Content-Type: application/soap+xml; charset=utf-8 -->
+<!-- Content-Length: nnn -->
+
+<?xml version="1.0"?>
+
+<soap:Envelope
+    xmlns:soap="http://www.w3.org/2003/05/soap-envelope/"
+    soap:encodingStyle="http://www.w3.org/2003/05/soap-encoding">
+
+    <soap:Body xmlns:m="http://www.example.org/api/admins">
+        <m:AdminResponse>
+        </m:AdminResponse>
+    </soap:Body>
+
+</soap:Envelope>
