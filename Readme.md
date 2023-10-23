@@ -16,6 +16,12 @@ use `npm install` then `npm start` to start work with it.
 $ docker compose up -d
 ```
 
+super admin account :
+
+> email: aziz@mail.com
+>
+> password: 123456
+
 after everything is done. you can run application on `localhost:80`
 
 ### bpmn (request certi ) :
