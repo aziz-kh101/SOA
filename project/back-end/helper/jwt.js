@@ -8,8 +8,6 @@ module.exports = {
       } else {
         callback(signedToken.payload);
       }
-
-      if (err) return res.sendStatus(403);
     });
   },
 
